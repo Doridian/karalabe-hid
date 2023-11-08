@@ -4,9 +4,10 @@
 // This file is released under the 3-clause BSD license. Note however that Linux
 // support depends on libusb, released under GNU LGPL 2.1 or later.
 
+//go:build (!linux && !darwin && !windows) || ios || !cgo
 // +build !linux,!darwin,!windows ios !cgo
 
-package hid
+package karalabe_hid
 
 // Supported returns whether this platform is supported by the HID library or not.
 // The goal of this method is to allow programatically handling platforms that do
